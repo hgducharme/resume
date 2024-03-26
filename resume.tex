@@ -9,78 +9,112 @@
 \usepackage{enumitem} % For itemized list formatting
 \usepackage{hyperref} % For hyperlinks
 
+%-------------------------------------------------------------------------------
 % Formatting
-\setlist{noitemsep} % Removes item separation
-\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule] % Section title format
-\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+%-------------------------------------------------------------------------------
+% Removes item separation
+\setlist{noitemsep}
 
-% Begin document
+% Section title format
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
+
+% Section title spacing
+\titlespacing*{\section}{2pt}{\baselineskip}{\baselineskip}
+
 \begin{document}
 
 % Disable page numbers
 \pagestyle{empty}
 
-% Header
+%-------------------------------------------------------------------------------
+% HEADER
+%-------------------------------------------------------------------------------
 \begin{center}
-\textbf{\Large Hunter Ducharme}\\[2pt] % Name
-hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA% Contact info
+\textbf{\Large Hunter Ducharme}\\[2pt]
+hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
 \end{center}
 
-% Education Section
+%-------------------------------------------------------------------------------
+% Education
+%-------------------------------------------------------------------------------
 \section*{EDUCATION}
 \noindent
-\textbf{Texas A\&M University}, College Station, TX \hfill December 2019\\ % University name and location
-\hspace{10mm} Bachelor of Science Double Major:  \hfill GPA: 3.12/4.0\\ % Degree and GPA
-Math and Aerospace Engineering
+\textbf{Texas A\&M University}, College Station, TX \hfill December 2019\\
+\hspace{10mm} Bachelor of Science Double Major: Math and Aerospace Engineering \hfill GPA: 3.12/4.0
 
-% Experience Section
-\section*{EXPERIENCE}
+%-------------------------------------------------------------------------------
+% Experience
+%-------------------------------------------------------------------------------
+\section*{RELEVANT EXPERIENCE}
 \noindent
-\textbf{Company Name} \hfill City, State\\ % Company name and location
-\textit{Position Title} \hfill Month Year - Month Year % Position and duration
+\textbf{AstroCarto} \hfill Houston, TX\\
+\textit{Contracted Aerospace Engineer} \hfill December 2024 - March 2024
 \begin{itemize}
-    \item Description of responsibilities and achievements at this position. % Job responsibilities and achievements
+    \item Developed a software application that calculates astronomy related algorithms.
+    \item Calculated the boundary of the visible portion of the Earth for a fictituous observer anywhere away from the Earth.
+    \item Calculated the subpoint great circle for any celestial interest.
+    \item Utilizied Python astronomy library Skyfield and JPL ephemerides.
 \end{itemize}
 
-% Additional Experience or Volunteer Work
 \noindent
-\textbf{Project or Volunteer Work Name} \hfill City, State\\ % Project or organization name and location
-\textit{Position Title, Volunteer} \hfill Month Year – Month Year % Position and duration
+\textbf{Odyssey Space Research} \hfill Houston, TX\\
+\textit{Aerospace Engineeer and Software Developer} \hfill Febuary 2020 - August 2022
 \begin{itemize}
-    \item Description of responsibilities and achievements at this position. % Responsibilities and achievements
+    \item Verified GNC/trajectory designs of ISS-visiting vehicles for rendezvous, proximity, and capture (RPOC) operations.
+    \item Determined solar array blockage based on vehicle position data using basic computational geometry and Python.
+    \item Worked on the National Team's Lunar Lander doing modeling and simulation development in C++.
+    \item Developed a planetary magnetic field model in C++ for an orbit determination/propagation simulation.
+    \item Developed code for a Node.js web application designed to display Orion spacecraft telemetry data.
+    \item Performed hardware and software integration for Orion and Lunar Lander Trick-based simulations.
 \end{itemize}
 
-% Club or Organization Experience
-\textbf{Club or Organization Name} \hfill City, State\\ % Club or organization name and location
-\textit{Position Title} \hfill Month Year – Ongoing % Position and duration
+\noindent
+\textbf{SentriForce} \hfill Houston, TX\\
+\textit{Contracted Full Stack Web Developer} \hfill June 2019 - August 2022
 \begin{itemize}
-    \item Description of responsibilities and achievements at this position. % Responsibilities and achievements
+    \item Designed and built a custom web application to toggle computers on remote networks.
+    \item Cut original task completion time by approximately 90\%.
+    \item Performed full-stack web development using Python/Django, HTML, CSS, andJavaScript.
+    \item Integrated a third-party REST API to fetch data from an online database.
+    \item Deployed web-application on an Ubuntu server using Nginx and Gunicorn.
 \end{itemize}
 
-% Projects Section
+%-------------------------------------------------------------------------------
+% Projects
+%-------------------------------------------------------------------------------
 \section*{PROJECTS}
 \noindent
-\textbf{Project Name} \hfill City, State\\ % Project name and location
-\textit{Project Link:} \url{https://github.com/username/projectname} \hfill Month Year - Status % Project link and duration
+\textbf{Chess Engine (work in progress)} \hfill March 2022 - Present\\
+\textit{Project Link:} \url{https://github.com/hgducharme/meatball}
 \begin{itemize}
-    \item Description of the project and your contributions. % Project description and contributions
+    \item Building a chess engine in C++17 entirely from scratch.
+    \item Implemented efficient move generation using bitboards, magic bitboards, and a perft function.
+    \item Develop the code base with intense focus on readability, maintainability, and adherence to SOLID principles
+    \item Designed and implemented a full build process, test suite, and coverage report generation.
+    \item Built a Lichess bot in Python to interface between the chess engine and the Lichess.com API.
+    \item Demonstrated an excellent ability to understand complex topics and translate them into code.
 \end{itemize}
 
 % Additional Project
 \noindent
-\textbf{Project Name} \hfill City, State\\ % Project name and location
-\textit{Project Link:} \url{https://www.projectwebsite.com/} \hfill Month Year % Project link and duration
+\textbf{Inverted Pendulum Control System} \hfill July 2019 - September 2019\\
+\textit{Project Link:} \url{https://github.com/hgducharme/inverted-pendulum}
 \begin{itemize}
-    \item Description of the project and your contributions. % Project description and contributions
+    \item Built an entirely custom inverted pendulum embedded system.
+    \item Derived the second-order nonlinear dynamic model using Lagrangian dynamics.
+    \item Converted the dynamic model to a linearized state-space model.
+    \item Built a simulation/validation environment in Python to help design the LQR controller.
+    \item Performed embedded software by implementing LQR control on a microcontroller using C++.
 \end{itemize}
 
-% Skills Section
-\section*{SKILLS}
+%-------------------------------------------------------------------------------
+% Skills
+%-------------------------------------------------------------------------------
+\section*{SKILLS \& COURSEWORK}
 \begin{itemize}
-    \item \textbf{Relevant Coursework:} List of relevant courses you have taken. % Relevant coursework
-    \item \textbf{Programming:} List of programming languages you are proficient in. % Programming skills
-    \item \textbf{Software:} List of software you are proficient in. % Software skills
-    \item \textbf{Communication:} List of communication skills you possess. % Communication skills
+    \item \textbf{Programming Languages:} Python, C++, Node.js, HTML, CSS, JavaScript, Bash
+    \item \textbf{Math Coursework:} Real analysis, abstract algebra, differential geometry, complex analysis, partial differential equations, linear algebra I \& II, numerical methods, discrete mathematics, probability
+    \item \textbf{Engineering Coursework:} Spacecraft attitude dynamics and control (graduate level), vehicle stability and control, active controls, numerical methods, astrodynamics, computational aerospace structural design (graduate level)
 \end{itemize}
 
 % End document
