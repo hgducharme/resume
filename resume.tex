@@ -21,10 +21,14 @@
 % Section title spacing
 \titlespacing*{\section}{2pt}{\baselineskip}{\baselineskip}
 
-\begin{document}
-
 % Disable page numbers
 \pagestyle{empty}
+
+%-------------------------------------------------------------------------------
+% Begin Document
+%-------------------------------------------------------------------------------
+
+\begin{document}
 
 %-------------------------------------------------------------------------------
 % HEADER
@@ -35,6 +39,13 @@ hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
 \end{center}
 
 %-------------------------------------------------------------------------------
+% Summary
+%-------------------------------------------------------------------------------
+\newcommand{\BartendingSummary}{I’m an experienced bartender with a passion for creating exceptional cocktails and providing excellent customer service. I have a proven track record of working efficiently in high-pressure environments while maintaining a friendly atmosphere and work environment. I am dedicated, reliable, and a team player looking to work with like-minded individuals who are committed to the success of the establishment.}
+
+\newcommand{\FireSummary}{I’m an extremely dedicated and physically fit individual looking to extend my passion for the outdoors and serving the public through a wildland firefighting position. I have a proven track record working in a team environment in high stress situations, and am eager to contribute my efforts towards wildfire prevention, containment, and restoration efforts.}
+
+%-------------------------------------------------------------------------------
 % Education
 %-------------------------------------------------------------------------------
 \section*{EDUCATION}
@@ -43,9 +54,10 @@ hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
 \hspace{10mm} Bachelor of Science Double Major: Math and Aerospace Engineering \hfill GPA: 3.12/4.0
 
 %-------------------------------------------------------------------------------
-% Experience
+% Experience Macros
 %-------------------------------------------------------------------------------
-\section*{RELEVANT EXPERIENCE}
+
+\newcommand{\AstroCarto}{
 \noindent
 \textbf{AstroCarto} \hfill Houston, TX\\
 \textit{Contracted Aerospace Engineer} \hfill December 2024 - March 2024
@@ -55,7 +67,9 @@ hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
     \item Calculated the subpoint great circle for any celestial interest.
     \item Utilizied Python astronomy library Skyfield and JPL ephemerides.
 \end{itemize}
+}
 
+\newcommand{\OdysseySpaceResearch}{
 \noindent
 \textbf{Odyssey Space Research} \hfill Houston, TX\\
 \textit{Aerospace Engineeer and Software Developer} \hfill Febuary 2020 - August 2022
@@ -67,7 +81,9 @@ hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
     \item Developed code for a Node.js web application designed to display Orion spacecraft telemetry data.
     \item Performed hardware and software integration for Orion and Lunar Lander Trick-based simulations.
 \end{itemize}
+}
 
+\newcommand{\SentriForce}{
 \noindent
 \textbf{SentriForce} \hfill Houston, TX\\
 \textit{Contracted Full Stack Web Developer} \hfill June 2019 - August 2022
@@ -78,13 +94,104 @@ hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
     \item Integrated a third-party REST API to fetch data from an online database.
     \item Deployed web-application on an Ubuntu server using Nginx and Gunicorn.
 \end{itemize}
+}
+
+\newcommand{\MilkAndHoney}{
+\noindent
+\textbf{Milk & Honey} \hfill Santa Barbara, CA\\
+\textit{Bartender/Shift Manager} \hfill June 2023 – March 2024
+\begin{itemize}
+    \item Maintained a key to the restaurant for closing and opening purposes.
+    \item Demonstrated proficiency in multitasking, time-management, and maintaining exceptional cleanliness of the bar.
+    \item Provided full service (food and drink) at the bar top while providing exceptional customer service to bar patrons.
+    \item Actively contributed to the development and refinement of the cocktail menu.
+    \item Demonstrated strong attention to detail with consistent use of a jigger and artistically garnishing each cocktail.
+    \item Develop and maintain relationships with regular customers, creating a welcoming and friendly atmosphere.
+    \item Upheld strict adherence to all relevant health and liquor regulations, ensuring a safe and enjoyable environment.
+\end{itemize}
+}
+
+\newcommand{\Eureka}{
+\noindent
+\textbf{Eureka!} \hfill Santa Barbara, CA\\
+\textit{Bartender} \hfill January 2023 – June 2023
+\begin{itemize}
+    \item Selected as one of the primary night-time bartenders.
+    \item Proven ability to handle 15 seats at the bar while making drinks for the whole restaurant.
+    \item Consistently use jigger to create hand-crafted cocktails while providing exceptional customer service to bar patrons.
+    \item Develop and maintain relationships with regular customers, creating a welcoming and friendly atmosphere.
+    \item Collaborate with other team members to ensure seamless service and a positive experience for all guests.
+    \item Manage inventory, ensuring that all supplies are well-stocked and prepared for busy shifts.
+\end{itemize}
+}
+
+\newcommand{\DoorDash}{
+\noindent
+\textbf{DoorDash} \hfill Houston, TX and Santa Barbara, CA\\
+\textit{Delivery Driver} \hfill August 2020 – January 2023
+\begin{itemize}
+    \item Communicate with customers to ensure deliveries are completed accurately and on-time.
+    \item Interact professionally with restaurant staff to obtain the correct order with the customer’s desired items.
+    \item Fulfill dispatched orders in a timely manner while practicing defensive driving.
+    \item Maintained a 4+ star customer rating by communicating effectively and ensuring food is hot upon delivery.
+\end{itemize}
+}
+
+\newcommand{\Marvinos}{
+\noindent
+\textbf{Marvino’s Italian Kitchen} \hfill Houston, TX\\
+\textit{Barback} \hfill April 2019 – March 2020
+\begin{itemize}
+    \item Greeted customers with silverware, bread, olive oil, and initial non alcoholic beverage orders.
+    \item Maintained cleanliness of the bar by bussing all customer seats at the bar and wiping down bar top.
+    \item Washed the entire bar down during closing shifts including floor mats.
+\end{itemize}
+}
+
+\newcommand{\LakeridgeTownhomes}{
+\textbf{Lakeridge Townhomes} \hfill College Station, TX\\
+\textit{Maintenance} \hfill June 2016 – December 2019
+\begin{itemize}
+    \item Promoted horizontally from construction laborer to head of maintenance.
+    \item In charge of repairing and fixing maintenance requests for 150 apartment units.
+    \item Maintained cleanliness of the apartment grounds ensuring no visible trash.
+\end{itemize}
+\textit{General Construction Laborer} \hfill June 2016 – December 2019
+\begin{itemize}
+    \item Promoted horizontally from construction laborer to head of maintenance.
+    \item In charge of repairing and fixing maintenance requests for 150 apartment units.
+    \item Maintained cleanliness of the apartment grounds ensuring no visible trash.
+\end{itemize}
+}
+
+\newcommand{\NassauBayFD}{
+\noindent
+\textbf{Nassau Bay Fire Department} \hfill Nassau Bay, TX\\
+\textit{Volunteer Firefighter/EMT} \hfill May 2020 - Febuary 2022
+\begin{itemize}
+    \item Volunteered as a firefighter/EMT and provided protection of life and property to the Nassau Bay community
+    \item Responded to 911 emergency service calls including fire, motor vehicle accidents, EMS calls, and rescue situations
+    \item Provided initial medical care including patient assessment and stabilization until mutual aid EMS arrived on scene
+    \item Actively participated in inspecting and maintaining all equipment around the station and on the fire apparatuses
+    \item Completed weekly trainings such as confined space drills and practice in initial attacks and vertical ventilation
+\end{itemize}
+}
 
 %-------------------------------------------------------------------------------
-% Projects
+% Experience Section
 %-------------------------------------------------------------------------------
-\section*{PROJECTS}
+\section*{RELEVANT EXPERIENCE}
+
+\AstroCarto
+\OdysseySpaceResearch
+\SentriForce
+
+%-------------------------------------------------------------------------------
+% Project Macros
+%-------------------------------------------------------------------------------
+\newcommand{\Meatball}{
 \noindent
-\textbf{Chess Engine (work in progress)} \hfill March 2022 - Present\\
+\textbf{Meatball - Chess Engine (work in progress)} \hfill March 2022 - Present\\
 \textit{Project Link:} \url{https://github.com/hgducharme/meatball}
 \begin{itemize}
     \item Building a chess engine in C++17 entirely from scratch.
@@ -94,8 +201,9 @@ hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
     \item Built a Lichess bot in Python to interface between the chess engine and the Lichess.com API.
     \item Demonstrated an excellent ability to understand complex topics and translate them into code.
 \end{itemize}
+}
 
-% Additional Project
+\newcommand{\InvertedPendulum}{
 \noindent
 \textbf{Inverted Pendulum Control System} \hfill July 2019 - September 2019\\
 \textit{Project Link:} \url{https://github.com/hgducharme/inverted-pendulum}
@@ -106,16 +214,42 @@ hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
     \item Built a simulation/validation environment in Python to help design the LQR controller.
     \item Performed embedded software by implementing LQR control on a microcontroller using C++.
 \end{itemize}
+}
 
 %-------------------------------------------------------------------------------
-% Skills
+% Project Section
 %-------------------------------------------------------------------------------
+\section*{PROJECTS}
+
+\Meatball
+\InvertedPendulum
+
+%-------------------------------------------------------------------------------
+% Skills, Coursework, Certification Macros
+%-------------------------------------------------------------------------------
+
+\newcommand{\EngineeringSkills}{
 \section*{SKILLS \& COURSEWORK}
 \begin{itemize}
     \item \textbf{Programming Languages:} Python, C++, Node.js, HTML, CSS, JavaScript, Bash
     \item \textbf{Math Coursework:} Real analysis, abstract algebra, differential geometry, complex analysis, partial differential equations, linear algebra I \& II, numerical methods, discrete mathematics, probability
     \item \textbf{Engineering Coursework:} Spacecraft attitude dynamics and control (graduate level), vehicle stability and control, active controls, numerical methods, astrodynamics, computational aerospace structural design (graduate level)
 \end{itemize}
+}
 
-% End document
+\newcommand{\FFCertifications}{
+\section*{Certifications}
+\begin{itemize}
+    \item NFPA 1001: Structural Firefighter 1 and 2 — IFSAC Certified
+    \item NFPA 1072: HAZMAT Awareness and Operations — IFSAC Certified
+    \item EMT-Basic — California EMT and NREMT
+\end{itemize}
+}
+
+%-------------------------------------------------------------------------------
+% Skills, Coursework, Certification Section
+%-------------------------------------------------------------------------------
+
+\EngineeringSkills
+
 \end{document}
