@@ -206,12 +206,13 @@ Mathematics and Aerospace Engineering
 \textbf{Meatball - Chess Engine (work in progress)} \hfill March 2022 - Present\\
 \textit{Project Link:} \url{https://github.com/hgducharme/meatball}
 \begin{itemize}
-    \item Building a chess engine in C++17 entirely from scratch.
-    \item Implemented efficient move generation using bitboards, magic bitboards, and a perft function.
-    \item Develop the code base with intense focus on readability, maintainability, and adherence to SOLID principles
-    \item Designed and implemented a full build process, test suite, and coverage report generation.
-    \item Built a Lichess bot in Python to interface between the chess engine and the Lichess.com API.
-    \item Demonstrated an excellent ability to understand complex topics and translate them into code.
+    \item Built a chess engine in C++17 entirely from scratch.
+    \item Used 64-bit integers to encode the piece locations on the chess board.
+    \item Implemented effiecent move generation by pre-computing each piece's attacks at compile time.
+    \item Created a recursive function to debug move generation by comparing the move tree to known online results.
+    \item Developed the code base with intense focus on readability, maintainability, and adherence to SOLID principles.
+    \item Maintain an extremely comprehensive test suite with coverage report generation using googletest and gcovr.
+    \item Designed an isolated build environment and continuous integration suite using make, docker, and Github Actions.
 \end{itemize}
 }
 
