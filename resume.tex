@@ -207,12 +207,14 @@ Mathematics and Aerospace Engineering
 \textit{Project Link:} \url{https://github.com/hgducharme/meatball}
 \begin{itemize}
     \item Built a chess engine in C++17 entirely from scratch.
-    \item Used 64-bit integers to encode the piece locations on the chess board.
-    \item Implemented effiecent move generation by pre-computing each piece's attacks at compile time.
-    \item Created a recursive function to debug move generation by comparing the move tree to known online results.
-    \item Developed the code base with intense focus on readability, maintainability, and adherence to SOLID principles.
-    \item Maintain an extremely comprehensive test suite with coverage report generation using googletest and gcovr.
-    \item Designed an isolated build environment and continuous integration suite using make, docker, and Github Actions.
+    \item Board representation: utilizes 64-bit integers to encode piece locations (bitboards).
+    \item Move generation: pre-computes and stores each piece's attack space for each square to increase speed during runtime.
+    \item Created a recursive perft function to debug move generation by comparing the move space to known online results.
+    \item Move search: utilizes Monte Carlo Tree Search (MCTS) to explore the search space and decide on the best move.
+    \item Move evaluation: a neural network trained with self-play reinforcement-learning to evaulate the quality of a position.
+    \item Developed the code base with intense focus on readability and maintainability.
+    \item Maintain a comprehensive test suite of unit and integration tests with coverage report generation.
+    \item Designed an isolated build environment and continuous integration pipeline using make, Docker, and Github Actions.
 \end{itemize}
 }
 
