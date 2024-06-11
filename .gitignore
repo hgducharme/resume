@@ -1,3 +1,7 @@
 *.log
-resume.*
-!resume.tex
+*.pdf
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.xdv
