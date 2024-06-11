@@ -16,16 +16,30 @@
 \geometry{a4paper, margin=0.75in} % Set paper size and margins
 
 %-------------------------------------------------------------------------------
-% Formatting
+% Fonts
 %-------------------------------------------------------------------------------
 
-\begin{document}
+\newfontfamily{\HelveticaN}{HelveticaNeue.ttc}[
+    Ligatures = TeX ,
+    Path = /System/Library/Fonts/ ,
+    UprightFeatures = {FontIndex=0} ,
+    BoldFeatures = {FontIndex=1} ,
+    ItalicFeatures = {FontIndex=2} ,
+    BoldItalicFeatures = {FontIndex=3} ,
+]
 
-% Set the main font to Helvetica, this will be used for all text
-\setmainfont{Helvetica}
+% Define the light version of the helvetica font
+\newfontfamily\HelveticaLight{Helvetica.ttc}[
+    Path = /System/Library/Fonts/ ,
+    UprightFeatures = {FontIndex=4} ,
+]
+
+% This command gives the ability to format text as the light font face
+% e.g., \lightfont{Hello World}
+\newcommand\lightfont[1]{{\HelveticaLight#1}}
 
 % Define a new font to be used for headers
-\newfontfamily\garamond{CormorantGaramond}[
+\newfontfamily{\Garamond}{CormorantGaramond}[
     Path = /Library/Fonts/ ,
     Extension = .ttf ,
     UprightFont = *-regular ,
@@ -34,9 +48,18 @@
     BoldItalicFont = *-bolditalic
 ]
 
+%-------------------------------------------------------------------------------
+% Formatting
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+% Set the main font
+\setmainfont{Helvetica}
+
 % Section header format
 \titleformat{\section}
-    {\Large\garamond} % formatting and font
+    {\Large\Garamond} % formatting and font
     {\thesection}{0em} % spacing between the section number and the title
     {} % the title
     [\titlerule] % additional code
@@ -73,7 +96,7 @@ itemsep=1sp}
 
 % Header
 \begin{center}
-{\Huge \garamond \bfseries Hunter Ducharme}\\[5pt] % add vertical spacing
+{\Huge \Garamond \bfseries Hunter Ducharme}\\[5pt] % add vertical spacing
 hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \end{center}
 
