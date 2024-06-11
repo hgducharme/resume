@@ -19,27 +19,20 @@
 % Fonts
 %-------------------------------------------------------------------------------
 
-\newfontfamily{\HelveticaN}{HelveticaNeue.ttc}[
-    Ligatures = TeX ,
-    Path = /System/Library/Fonts/ ,
-    UprightFeatures = {FontIndex=0} ,
-    BoldFeatures = {FontIndex=1} ,
-    ItalicFeatures = {FontIndex=2} ,
-    BoldItalicFeatures = {FontIndex=3} ,
-]
+% How to define a font using a .ttc file (where all the fonts are in a single file):
+% \newfontfamily{\Noteworthy}{Noteworthy.ttc}[
+%     Ligatures = TeX ,
+%     Path = /System/Library/Fonts/ ,
+%     UprightFeatures = {FontIndex=0} ,
+%     BoldFeatures = {FontIndex=1} ,
+%     ItalicFeatures = {FontIndex=2} ,
+%     BoldItalicFeatures = {FontIndex=3} ,
+% ]
 
-% Define the light version of the helvetica font
-\newfontfamily\HelveticaLight{Helvetica.ttc}[
-    Path = /System/Library/Fonts/ ,
-    UprightFeatures = {FontIndex=4} ,
-]
-
-% This command gives the ability to format text as the light font face
-% e.g., \lightfont{Hello World}
-\newcommand\lightfont[1]{{\HelveticaLight#1}}
-
+% How to define a font using a .ttf file:
 % Define a new font to be used for headers
 \newfontfamily{\Garamond}{CormorantGaramond}[
+    Ligatures = TeX ,
     Path = /Library/Fonts/ ,
     Extension = .ttf ,
     UprightFont = *-regular ,
@@ -47,6 +40,26 @@
     ItalicFont = *-italic ,
     BoldItalicFont = *-bolditalic
 ]
+
+% How to define the light version of a font in a .ttf file:
+% % Define a new font to be used for headers
+% \newfontfamily{\GaramondLight}{CormorantGaramond}[
+%     Ligatures = TeX ,
+%     Path = /Library/Fonts/ ,
+%     Extension = .ttf ,
+%     UprightFont = *-Light ,
+%     ItalicFont = *-LightItalic ,
+% ]
+
+% Define the light version of the helvetica font in the .ttc file
+\newfontfamily\HelveticaLight{Helvetica.ttc}[
+    Ligatures = TeX ,
+    Path = /System/Library/Fonts/ ,
+    UprightFeatures = {FontIndex=4} ,
+]
+
+% This command gives the ability to format text as the light font face, e.g. `\lightfont{Hello World}`
+\newcommand\lightfont[1]{{\HelveticaLight#1}}
 
 %-------------------------------------------------------------------------------
 % Formatting
