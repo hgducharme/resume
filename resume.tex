@@ -1,5 +1,5 @@
 % Document class and font size
-\documentclass[a4paper,9pt]{extarticle}
+\documentclass[a4paper,10pt]{extarticle}
 
 % Packages
 \usepackage[utf8]{inputenc} % For input encoding
@@ -9,23 +9,42 @@
 \usepackage{enumitem} % For itemized list formatting
 \usepackage{hyperref} % For hyperlinks
 
+% \usepackage[T1]{fontenc} % for proper font encoding
+
+\usepackage{fontspec}
+% \setmainfont{Helvetica} % Set the main font to Helvetica
+% \newfont{\sectionfont}{Garamond} % Define a new font for section headers
+
 %-------------------------------------------------------------------------------
 % Formatting
 %-------------------------------------------------------------------------------
-% Removes item separation
+
+% Removes separations between itemized bullet points
 \setlist{noitemsep}
 
-% Section title format
-\titleformat{\section}{\large\bfseries}{\thesection}{2em}{}[\titlerule]
+% Use sans-serif font as default
+% \renewcommand{\familydefault}{\sfdefault} 
 
-% Section title spacing
-\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+% Define a macro to set the section header font
+% \newcommand{\sectionfont}{\fontfamily{ctt}\selectfont}
+
+% Section header format
+\titleformat{\section}
+    {\large\bfseries} % formatting
+    {\thesection}{0em} % spacing between the section number and the title
+    {} % the title
+    [\titlerule] % additional code
+
+% Section header spacing
+\titlespacing*{\section}
+    {0pt}
+    {\baselineskip}
+    {\baselineskip}
 
 % Disable page numbers
 \pagestyle{empty}
 
 \newcommand\tab[1][1cm]{\hspace*{#1}}
-
 
 %-------------------------------------------------------------------------------
 % Begin Document
@@ -37,7 +56,7 @@
 %-------------------------------------------------------------------------------
 \newcommand{\BartendingSummary}{I’m an experienced bartender with a passion for creating exceptional cocktails and providing excellent customer service. I have a proven track record of working efficiently in high-pressure environments while maintaining a friendly atmosphere and work environment. I am dedicated, reliable, and a team player looking to work with like-minded individuals who are committed to the success of the establishment.}
 
-\newcommand{\ServingSummary}{I’m an experienced bartender with a passion for creating exceptional cocktails and providing excellent customer service. I have a proven track record of working efficiently in high-pressure environments while maintaining a friendly atmosphere and work environment. I am dedicated, reliable, and a team player looking to work with like-minded individuals who are committed to the success of the establishment.}
+\newcommand{\ServingSummary}{I am an experienced service industry professional with a strong passion for providing exceptional customer service and creating memorable experiences for guests. With a proven ability to work efficiently in fast-paced environments, I excel in multitasking and maintaining a positive, welcoming atmosphere. I am dedicated, reliable, and a team player, committed to contributing to the success of the establishment.}
 
 \newcommand{\FireSummary}{I’m an extremely dedicated and physically fit individual looking to extend my passion for the outdoors and serving the public through a wildland firefighting position. I have a proven track record working in a team environment in high stress situations, and am eager to contribute my efforts towards wildfire prevention, containment, and restoration efforts.}
 
@@ -269,7 +288,7 @@ hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \end{center}
 
 \begin{center}
-\BartendingSummary
+\ServingSummary
 \end{center}
 
 \section*{RELEVANT EXPERIENCE}
