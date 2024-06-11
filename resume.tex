@@ -4,33 +4,37 @@
 % Packages
 \usepackage[utf8]{inputenc} % For input encoding
 \usepackage{geometry} % For page margins
-\geometry{a4paper, margin=0.75in} % Set paper size and margins
 \usepackage{titlesec} % For section title formatting
 \usepackage{enumitem} % For itemized list formatting
 \usepackage{hyperref} % For hyperlinks
+\usepackage{fontspec} % For custom fonts with xelatex and lualatex
+\usepackage{titlesec} % Use titlesec to apply the new font to section headers
 
-% \usepackage[T1]{fontenc} % for proper font encoding
-
-\usepackage{fontspec}
-% \setmainfont{Helvetica} % Set the main font to Helvetica
-% \newfont{\sectionfont}{Garamond} % Define a new font for section headers
+% Set the document margins
+\geometry{a4paper, margin=0.75in} % Set paper size and margins
 
 %-------------------------------------------------------------------------------
-% Formatting
+% Begin Document
 %-------------------------------------------------------------------------------
 
-% Removes separations between itemized bullet points
-\setlist{noitemsep}
+\begin{document}
 
-% Use sans-serif font as default
-% \renewcommand{\familydefault}{\sfdefault} 
+% Set the main font to Helvetica, this will be used for all text
+\setmainfont{Arial}
 
-% Define a macro to set the section header font
-% \newcommand{\sectionfont}{\fontfamily{ctt}\selectfont}
+% Define a new font to be used for headers
+\newfontfamily\garamond{CormorantGaramond}[
+    Path = /Library/Fonts/ ,
+    Extension = .ttf ,
+    UprightFont = *-regular ,
+    BoldFont = *-bold ,
+    ItalicFont = *-italic ,
+    BoldItalicFont = *-bolditalic
+]
 
 % Section header format
 \titleformat{\section}
-    {\large\bfseries} % formatting
+    {\Large\bfseries} % formatting
     {\thesection}{0em} % spacing between the section number and the title
     {} % the title
     [\titlerule] % additional code
@@ -41,15 +45,19 @@
     {\baselineskip}
     {\baselineskip}
 
+% Reduce the left margin of itemized bullet points
+% and, remove separations between itemized bullet points
+\setlist[itemize]
+{
+label=\textbullet,
+itemindent=-7pt,
+itemsep=1sp}
+
+
 % Disable page numbers
 \pagestyle{empty}
 
 \newcommand\tab[1][1cm]{\hspace*{#1}}
-
-%-------------------------------------------------------------------------------
-% Begin Document
-%-------------------------------------------------------------------------------
-\begin{document}
 
 %-------------------------------------------------------------------------------
 % Summaries
@@ -171,7 +179,7 @@ Associate of Science in Science \hfill GPA: 3.67/4.0
 \begin{itemize}
     \item Selected as one of the primary night-time bartenders.
     \item Proven ability to handle 15 seats at the bar while making drinks for the whole restaurant.
-    \item Consistently use jigger to create hand-crafted cocktails while providing exceptional customer service to bar patrons.
+    \item Consistently used jigger to create balanced cocktails while providing exceptional customer service to patrons.
     \item Develop and maintain relationships with regular customers, creating a welcoming and friendly atmosphere.
     \item Collaborate with other team members to ensure seamless service and a positive experience for all guests.
     \item Manage inventory, ensuring that all supplies are well-stocked and prepared for busy shifts.
@@ -181,7 +189,7 @@ Associate of Science in Science \hfill GPA: 3.67/4.0
 \newcommand{\DoorDash}{
 \noindent
 \textbf{DoorDash} \hfill Houston, TX and Santa Barbara, CA\\
-\textit{Delivery Driver} \hfill August 2020 – January 2023
+\textit{Delivery Driver} \hfill March 2020 – January 2023
 \begin{itemize}
     \item Communicate with customers to ensure deliveries are completed accurately and on-time.
     \item Interact professionally with restaurant staff to obtain the correct order with the customer’s desired items.
@@ -203,13 +211,34 @@ Associate of Science in Science \hfill GPA: 3.67/4.0
 
 \newcommand{\LakeridgeTownhomes}{
 \textbf{Lakeridge Townhomes} \hfill College Station, TX\\
-\textit{Maintenance} \hfill June 2016 – December 2019
+\textit{Maintenance} \hfill August 2016 – December 2019
 \begin{itemize}
     \item Promoted horizontally from construction laborer to head of maintenance.
     \item In charge of repairing and fixing maintenance requests for 150 apartment units.
     \item Maintained cleanliness of the apartment grounds ensuring no visible trash.
 \end{itemize}
-\textit{Construction Laborer} \hfill June 2016 – December 2019
+\textit{Construction Laborer} \hfill June 2016 – August 2016
+\begin{itemize}
+    \item Performed general labor for 10 intense weeks during construction of four new, 3-story apartment buildings.
+    \item Cleaned construction site including sweeping dirt, removing drywall and broken brick, moving doors, and picking up trash.
+    \item Utilized basic hand tools and heavy machinery, including skill saws, Bobcat loaders, and Genie forklifts.
+    \item Provided general maintenance for Lakeridge residents.
+\end{itemize}
+}
+
+\newcommand{\LakeridgeTownhomesMaintenance}{
+\textbf{Lakeridge Townhomes} \hfill College Station, TX\\
+\textit{Maintenance} \hfill August 2016 – December 2019
+\begin{itemize}
+    \item Promoted horizontally from construction laborer to head of maintenance.
+    \item In charge of repairing and fixing maintenance requests for 150 apartment units.
+    \item Maintained cleanliness of the apartment grounds ensuring no visible trash.
+\end{itemize}
+}
+
+\newcommand{\LakeridgeTownhomesLaborer}{
+\textbf{Lakeridge Townhomes} \hfill College Station, TX\\
+\textit{Construction Laborer} \hfill June 2016 – August 2016
 \begin{itemize}
     \item Performed general labor for 10 intense weeks during construction of four new, 3-story apartment buildings.
     \item Cleaned construction site including sweeping dirt, removing drywall and broken brick, moving doors, and picking up trash.
@@ -283,7 +312,7 @@ Associate of Science in Science \hfill GPA: 3.67/4.0
 
 % Header
 \begin{center}
-\textbf{\Large Hunter Ducharme}\\[2pt]
+{\Huge \garamond \bfseries Hunter Ducharme}\\[3pt] % add vertical spacing
 hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \end{center}
 
@@ -296,6 +325,7 @@ hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \Eureka
 \DoorDash
 \Marvinos
+\LakeridgeTownhomesMaintenance
 
 \section*{EDUCATION}
 \Lonestar
