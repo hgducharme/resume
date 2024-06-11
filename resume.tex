@@ -16,54 +16,50 @@
 \setlist{noitemsep}
 
 % Section title format
-\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries}{\thesection}{2em}{}[\titlerule]
 
 % Section title spacing
-\titlespacing*{\section}{2pt}{\baselineskip}{\baselineskip}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 
 % Disable page numbers
 \pagestyle{empty}
 
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 
+
 %-------------------------------------------------------------------------------
 % Begin Document
 %-------------------------------------------------------------------------------
-
 \begin{document}
 
 %-------------------------------------------------------------------------------
-% HEADER
-%-------------------------------------------------------------------------------
-\begin{center}
-\textbf{\Large Hunter Ducharme}\\[2pt]
-hgducharme@gmail.com | (281) 450-7154 | Santa Barbara, CA
-\end{center}
-
-%-------------------------------------------------------------------------------
-% Summary
+% Summaries
 %-------------------------------------------------------------------------------
 \newcommand{\BartendingSummary}{I’m an experienced bartender with a passion for creating exceptional cocktails and providing excellent customer service. I have a proven track record of working efficiently in high-pressure environments while maintaining a friendly atmosphere and work environment. I am dedicated, reliable, and a team player looking to work with like-minded individuals who are committed to the success of the establishment.}
 
-\newcommand{\FireSummary}{I’m an extremely dedicated and physically fit individual looking to extend my passion for the outdoors and serving the public through a wildland firefighting position. I have a proven track record working in a team environment in high stress situations, and am eager to contribute my efforts towards wildfire prevention, containment, and restoration efforts.}
+\newcommand{\ServingSummary}{I’m an experienced bartender with a passion for creating exceptional cocktails and providing excellent customer service. I have a proven track record of working efficiently in high-pressure environments while maintaining a friendly atmosphere and work environment. I am dedicated, reliable, and a team player looking to work with like-minded individuals who are committed to the success of the establishment.}
 
-% \section*{SUMMARY}
-% \FireSummary
+\newcommand{\FireSummary}{I’m an extremely dedicated and physically fit individual looking to extend my passion for the outdoors and serving the public through a wildland firefighting position. I have a proven track record working in a team environment in high stress situations, and am eager to contribute my efforts towards wildfire prevention, containment, and restoration efforts.}
 
 %-------------------------------------------------------------------------------
 % Education
 %-------------------------------------------------------------------------------
-\section*{EDUCATION}
-
+\newcommand{\TAMU}{
 \noindent
 \textbf{Texas A\&M University}, College Station, TX \hfill December 2019\\
 B.Sc. Double Major \hfill GPA: 3.12/4.0\\
 Mathematics and Aerospace Engineering
+}
+
+\newcommand{\Lonestar}{
+\noindent
+\textbf{Lone Star College - CyFair}, Houston, TX \hfill May 2016\\
+Associate of Science in Science \hfill GPA: 3.67/4.0
+}
 
 %-------------------------------------------------------------------------------
-% Experience Macros
+% Experience
 %-------------------------------------------------------------------------------
-
 \newcommand{\Sundowners}{
 \noindent
 \textbf{U.S. Forest Service, Crew 8 (Sundowners)} \hfill Ojai, CA\\
@@ -97,7 +93,7 @@ Mathematics and Aerospace Engineering
 \newcommand{\OdysseySpaceResearch}{
 \noindent
 \textbf{Odyssey Space Research} \hfill Houston, TX\\
-\textit{Aerospace Engineeer and Software Developer} \hfill Febuary 2020 - August 2022
+\textit{Aerospace Engineer and Software Developer} \hfill February 2020 - August 2022
 \begin{itemize}
     \item Verified GNC/trajectory designs of ISS-visiting vehicles for rendezvous, proximity, and capture (RPOC) operations.
     \item Determined solar array blockage based on vehicle position data using basic computational geometry and Python.
@@ -105,6 +101,19 @@ Mathematics and Aerospace Engineering
     \item Developed a planetary magnetic field model in C++ for an orbit determination/propagation simulation.
     \item Developed code for a Node.js web application designed to display Orion spacecraft telemetry data.
     \item Performed hardware and software integration for Orion and Lunar Lander Trick-based simulations.
+\end{itemize}
+}
+
+\newcommand{\NassauBayFD}{
+\noindent
+\textbf{Nassau Bay Fire Department} \hfill Nassau Bay, TX\\
+\textit{Volunteer Firefighter/EMT} \hfill May 2020 - February 2022
+\begin{itemize}
+    \item Volunteered as a firefighter/EMT and provided protection of life and property to the Nassau Bay community
+    \item Responded to 911 emergency service calls including fire, motor vehicle accidents, EMS calls, and rescue situations
+    \item Provided initial medical care including patient assessment and stabilization until mutual aid EMS arrived on scene
+    \item Actively participated in inspecting and maintaining all equipment around the station and on the fire apparatuses
+    \item Completed weekly trainings such as confined space drills and practice in initial attacks and vertical ventilation
 \end{itemize}
 }
 
@@ -190,35 +199,12 @@ Mathematics and Aerospace Engineering
 \end{itemize}
 }
 
-\newcommand{\NassauBayFD}{
-\noindent
-\textbf{Nassau Bay Fire Department} \hfill Nassau Bay, TX\\
-\textit{Volunteer Firefighter/EMT} \hfill May 2020 - Febuary 2022
-\begin{itemize}
-    \item Volunteered as a firefighter/EMT and provided protection of life and property to the Nassau Bay community
-    \item Responded to 911 emergency service calls including fire, motor vehicle accidents, EMS calls, and rescue situations
-    \item Provided initial medical care including patient assessment and stabilization until mutual aid EMS arrived on scene
-    \item Actively participated in inspecting and maintaining all equipment around the station and on the fire apparatuses
-    \item Completed weekly trainings such as confined space drills and practice in initial attacks and vertical ventilation
-\end{itemize}
-}
-
 \newcommand{\Engineering}{\AstroCarto \OdysseySpaceResearch \SentriForce}
 \newcommand{\FireEMS}{\Sundowners \NassauBayFD \LakeridgeTownhomes}
 \newcommand{\ServiceIndustry}{\MilkAndHoney \Eureka \DoorDash \Marvinos}
 
 %-------------------------------------------------------------------------------
-% Experience Section
-%-------------------------------------------------------------------------------
-\section*{RELEVANT EXPERIENCE}
-
-\AstroCarto
-\Sundowners
-\MilkAndHoney
-\Eureka
-
-%-------------------------------------------------------------------------------
-% Project Macros
+% Projects
 %-------------------------------------------------------------------------------
 \newcommand{\Meatball}{
 \noindent
@@ -251,17 +237,8 @@ Mathematics and Aerospace Engineering
 }
 
 %-------------------------------------------------------------------------------
-% Project Section
+% Skills, Coursework, and Certifications
 %-------------------------------------------------------------------------------
-% \section*{PROJECTS}
-
-% \Meatball
-% \InvertedPendulum
-
-%-------------------------------------------------------------------------------
-% Skills, Coursework, Certification Macros
-%-------------------------------------------------------------------------------
-
 \newcommand{\EngineeringSkills}{
 \section*{SKILLS \& COURSEWORK}
 \begin{itemize}
@@ -282,9 +259,33 @@ Mathematics and Aerospace Engineering
 }
 
 %-------------------------------------------------------------------------------
-% Skills, Coursework, Certification Section
+% Resume
 %-------------------------------------------------------------------------------
 
-\FFCertifications
+% Header
+\begin{center}
+\textbf{\Large Hunter Ducharme}\\[2pt]
+hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
+\end{center}
+
+\begin{center}
+\BartendingSummary
+\end{center}
+
+\section*{RELEVANT EXPERIENCE}
+\MilkAndHoney
+\Eureka
+\DoorDash
+\Marvinos
+
+\section*{EDUCATION}
+\Lonestar
+
+% \section*{PROJECTS}
+% \Meatball
+% \InvertedPendulum
+
+% \EngineeringSkills
+% \FFCertifications
 
 \end{document}
