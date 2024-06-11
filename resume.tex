@@ -14,7 +14,7 @@
 \geometry{a4paper, margin=0.75in} % Set paper size and margins
 
 %-------------------------------------------------------------------------------
-% Begin Document
+% Formatting
 %-------------------------------------------------------------------------------
 
 \begin{document}
@@ -53,262 +53,21 @@ label=\textbullet,
 itemindent=-7pt,
 itemsep=1sp}
 
-
 % Disable page numbers
 \pagestyle{empty}
 
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 
 %-------------------------------------------------------------------------------
-% Summaries
-%-------------------------------------------------------------------------------
-\newcommand{\BartendingSummary}{I’m an experienced bartender with a passion for creating exceptional cocktails and providing excellent customer service. I have a proven track record of working efficiently in high-pressure environments while maintaining a friendly atmosphere and work environment. I am dedicated, reliable, and a team player looking to work with like-minded individuals who are committed to the success of the establishment.}
-
-\newcommand{\ServingSummary}{I am an experienced service industry professional with a strong passion for providing exceptional customer service and creating memorable experiences for guests. With a proven ability to work efficiently in fast-paced environments, I excel in multitasking and maintaining a positive, welcoming atmosphere. I am dedicated, reliable, and a team player, committed to contributing to the success of the establishment.}
-
-\newcommand{\FireSummary}{I’m an extremely dedicated and physically fit individual looking to extend my passion for the outdoors and serving the public through a wildland firefighting position. I have a proven track record working in a team environment in high stress situations, and am eager to contribute my efforts towards wildfire prevention, containment, and restoration efforts.}
-
-%-------------------------------------------------------------------------------
-% Education
-%-------------------------------------------------------------------------------
-\newcommand{\TAMU}{
-\noindent
-\textbf{Texas A\&M University}, College Station, TX \hfill December 2019\\
-B.Sc. Double Major \hfill GPA: 3.12/4.0\\
-Mathematics and Aerospace Engineering
-}
-
-\newcommand{\Lonestar}{
-\noindent
-\textbf{Lone Star College - CyFair}, Houston, TX \hfill May 2016\\
-Associate of Science in Science \hfill GPA: 3.67/4.0
-}
-
-%-------------------------------------------------------------------------------
-% Experience
-%-------------------------------------------------------------------------------
-\newcommand{\Sundowners}{
-\noindent
-\textbf{U.S. Forest Service, Crew 8 (Sundowners)} \hfill Ojai, CA\\
-\textit{Forestry Technician - Wildland Firefighter} \hfill May 2024 - Present
-\begin{itemize}
-    \item Member of a 16-person Type II hand crew, adeptly navigating dynamic, high-stress, and hazardous environments
-    \item Proficiently operated in steep and uneven terrain on extended shifts while carrying gear exceeding 45 lbs.
-    \item Crew responsibilities included fire line construction, fuels suppression and reduction, and mop-up tasks
-    \item Utilized hand tools to construct fire lines, ensuring effective containment and control.
-    \item Demonstrated leadership as the lead EMT, overseeing crew medical concerns and emergencies
-    \item Diligently conducted daily vehicle inspections and station upkeep, ensuring operational readiness
-    \item Maintained vigilant situational awareness, monitoring for potential hazards and changing conditions
-    \item Communicated effectively with team members to achieve project goals while prioritizing team safety
-\end{itemize}
-}
-
-\newcommand{\AstroCarto}{
-\noindent
-\textbf{AstroCarto} \hfill Santa Barbara, CA\\
-\textit{Contracted Software Developer} \hfill December 2024 - March 2024
-\begin{itemize}
-    \item Designed and implemented a flask API that performs precise astronomy calculations given a moment in time
-    \item Utilized JPL's DE441 ephemeris to accurately compute planetary state vectors
-    \item Applied spherical geometry to calculate the boundary of the Earth's visible portion for a distant observer
-    \item Utilized Lunar osculating orbital elements to calculate the position of the lunar ascending node
-    \item Used the Skyfield library for advanced timekeeping, JPL ephemeris parsing, and planetary subpoint determination
-    \item Successfully negotiated contract terms with clients, defining clear deliverables and specs to ensure project alignment
-\end{itemize}
-}
-
-\newcommand{\OdysseySpaceResearch}{
-\noindent
-\textbf{Odyssey Space Research} \hfill Houston, TX\\
-\textit{Aerospace Engineer and Software Developer} \hfill February 2020 - August 2022
-\begin{itemize}
-    \item Verified GNC/trajectory designs of ISS-visiting vehicles for rendezvous, proximity, and capture (RPOC) operations.
-    \item Determined solar array blockage based on vehicle position data using basic computational geometry and Python.
-    \item Worked on the National Team's Lunar Lander doing modeling and simulation development in C++.
-    \item Developed a planetary magnetic field model in C++ for an orbit determination/propagation simulation.
-    \item Developed code for a Node.js web application designed to display Orion spacecraft telemetry data.
-    \item Performed hardware and software integration for Orion and Lunar Lander Trick-based simulations.
-\end{itemize}
-}
-
-\newcommand{\NassauBayFD}{
-\noindent
-\textbf{Nassau Bay Fire Department} \hfill Nassau Bay, TX\\
-\textit{Volunteer Firefighter/EMT} \hfill May 2020 - February 2022
-\begin{itemize}
-    \item Volunteered as a firefighter/EMT and provided protection of life and property to the Nassau Bay community
-    \item Responded to 911 emergency service calls including fire, motor vehicle accidents, EMS calls, and rescue situations
-    \item Provided initial medical care including patient assessment and stabilization until mutual aid EMS arrived on scene
-    \item Actively participated in inspecting and maintaining all equipment around the station and on the fire apparatuses
-    \item Completed weekly trainings such as confined space drills and practice in initial attacks and vertical ventilation
-\end{itemize}
-}
-
-\newcommand{\SentriForce}{
-\noindent
-\textbf{SentriForce} \hfill Houston, TX\\
-\textit{Contracted Full Stack Web Developer} \hfill June 2019 - August 2022
-\begin{itemize}
-    \item Designed and built a custom web application to toggle computers on remote networks.
-    \item Cut original task completion time by approximately 90\%.
-    \item Performed full-stack web development using Python/Django, HTML, CSS, andJavaScript.
-    \item Integrated a third-party REST API to fetch data from an online database.
-    \item Deployed web-application on an Ubuntu server using Nginx and Gunicorn.
-\end{itemize}
-}
-
-\newcommand{\MilkAndHoney}{
-\noindent
-\textbf{Milk \& Honey} \hfill Santa Barbara, CA\\
-\textit{Bartender/Closing Shift Lead} \hfill June 2023 – March 2024
-\begin{itemize}
-    \item Maintained a key to the restaurant for closing and opening purposes.
-    \item Demonstrated proficiency in multitasking, time-management, and maintaining exceptional cleanliness of the bar.
-    \item Provided full service (food and drink) at the bar top while providing exceptional customer service to bar patrons.
-    \item Actively contributed to the development and refinement of the cocktail menu.
-    \item Demonstrated strong attention to detail with consistent use of a jigger and artistically garnishing each cocktail.
-    \item Develop and maintain relationships with regular customers, creating a welcoming and friendly atmosphere.
-    \item Upheld strict adherence to all relevant health and liquor regulations, ensuring a safe and enjoyable environment.
-\end{itemize}
-}
-
-\newcommand{\Eureka}{
-\noindent
-\textbf{Eureka!} \hfill Santa Barbara, CA\\
-\textit{Bartender} \hfill January 2023 – June 2023
-\begin{itemize}
-    \item Selected as one of the primary night-time bartenders.
-    \item Proven ability to handle 15 seats at the bar while making drinks for the whole restaurant.
-    \item Consistently used jigger to create balanced cocktails while providing exceptional customer service to patrons.
-    \item Develop and maintain relationships with regular customers, creating a welcoming and friendly atmosphere.
-    \item Collaborate with other team members to ensure seamless service and a positive experience for all guests.
-    \item Manage inventory, ensuring that all supplies are well-stocked and prepared for busy shifts.
-\end{itemize}
-}
-
-\newcommand{\DoorDash}{
-\noindent
-\textbf{DoorDash} \hfill Houston, TX and Santa Barbara, CA\\
-\textit{Delivery Driver} \hfill March 2020 – January 2023
-\begin{itemize}
-    \item Communicate with customers to ensure deliveries are completed accurately and on-time.
-    \item Interact professionally with restaurant staff to obtain the correct order with the customer’s desired items.
-    \item Fulfill dispatched orders in a timely manner while practicing defensive driving.
-    \item Maintained a 4+ star customer rating by communicating effectively and ensuring food is hot upon delivery.
-\end{itemize}
-}
-
-\newcommand{\Marvinos}{
-\noindent
-\textbf{Marvino’s Italian Kitchen} \hfill Houston, TX\\
-\textit{Barback} \hfill April 2019 – March 2020
-\begin{itemize}
-    \item Greeted customers with silverware, bread, olive oil, and initial non alcoholic beverage orders.
-    \item Maintained cleanliness of the bar by bussing all customer seats at the bar and wiping down bar top.
-    \item Washed the entire bar down during closing shifts including floor mats.
-\end{itemize}
-}
-
-\newcommand{\LakeridgeTownhomes}{
-\textbf{Lakeridge Townhomes} \hfill College Station, TX\\
-\textit{Maintenance} \hfill August 2016 – December 2019
-\begin{itemize}
-    \item Promoted horizontally from construction laborer to head of maintenance.
-    \item In charge of repairing and fixing maintenance requests for 150 apartment units.
-    \item Maintained cleanliness of the apartment grounds ensuring no visible trash.
-\end{itemize}
-\textit{Construction Laborer} \hfill June 2016 – August 2016
-\begin{itemize}
-    \item Performed general labor for 10 intense weeks during construction of four new, 3-story apartment buildings.
-    \item Cleaned construction site including sweeping dirt, removing drywall and broken brick, moving doors, and picking up trash.
-    \item Utilized basic hand tools and heavy machinery, including skill saws, Bobcat loaders, and Genie forklifts.
-    \item Provided general maintenance for Lakeridge residents.
-\end{itemize}
-}
-
-\newcommand{\LakeridgeTownhomesMaintenance}{
-\textbf{Lakeridge Townhomes} \hfill College Station, TX\\
-\textit{Maintenance} \hfill August 2016 – December 2019
-\begin{itemize}
-    \item Promoted horizontally from construction laborer to head of maintenance.
-    \item In charge of repairing and fixing maintenance requests for 150 apartment units.
-    \item Maintained cleanliness of the apartment grounds ensuring no visible trash.
-\end{itemize}
-}
-
-\newcommand{\LakeridgeTownhomesLaborer}{
-\textbf{Lakeridge Townhomes} \hfill College Station, TX\\
-\textit{Construction Laborer} \hfill June 2016 – August 2016
-\begin{itemize}
-    \item Performed general labor for 10 intense weeks during construction of four new, 3-story apartment buildings.
-    \item Cleaned construction site including sweeping dirt, removing drywall and broken brick, moving doors, and picking up trash.
-    \item Utilized basic hand tools and heavy machinery, including skill saws, Bobcat loaders, and Genie forklifts.
-    \item Provided general maintenance for Lakeridge residents.
-\end{itemize}
-}
-
-\newcommand{\Engineering}{\AstroCarto \OdysseySpaceResearch \SentriForce}
-\newcommand{\FireEMS}{\Sundowners \NassauBayFD \LakeridgeTownhomes}
-\newcommand{\ServiceIndustry}{\MilkAndHoney \Eureka \DoorDash \Marvinos}
-
-%-------------------------------------------------------------------------------
-% Projects
-%-------------------------------------------------------------------------------
-\newcommand{\Meatball}{
-\noindent
-\textbf{Meatball - Chess Engine (work in progress)} \hfill March 2022 - Present\\
-\textit{Project Link:} \url{https://github.com/hgducharme/meatball}
-\begin{itemize}
-    \item Built a chess engine in C++17 entirely from scratch.
-    \item Board representation: utilizes 64-bit integers to encode piece locations (bitboards).
-    \item Move generation: pre-computes and stores each piece's attack space for each square to increase speed during runtime.
-    \item Created a recursive perft function to debug move generation by comparing the move space to known online results.
-    \item Move search: utilizes Monte Carlo Tree Search (MCTS) to explore the search space and decide on the best move.
-    \item Move evaluation: a neural network trained with self-play reinforcement-learning to evaulate the quality of a position.
-    \item Developed the code base with intense focus on readability and maintainability.
-    \item Maintain a comprehensive test suite of unit and integration tests with coverage report generation.
-    \item Designed an isolated build environment and continuous integration pipeline using make, Docker, and Github Actions.
-\end{itemize}
-}
-
-\newcommand{\InvertedPendulum}{
-\noindent
-\textbf{Inverted Pendulum Control System} \hfill July 2019 - September 2019\\
-\textit{Project Link:} \url{https://github.com/hgducharme/inverted-pendulum}
-\begin{itemize}
-    \item Built an entirely custom inverted pendulum embedded system.
-    \item Derived the second-order nonlinear dynamic model using Lagrangian dynamics.
-    \item Converted the dynamic model to a linearized state-space model.
-    \item Built a simulation/validation environment in Python to help design the LQR controller.
-    \item Performed embedded software by implementing LQR control on a microcontroller using C++.
-\end{itemize}
-}
-
-%-------------------------------------------------------------------------------
-% Skills, Coursework, and Certifications
-%-------------------------------------------------------------------------------
-\newcommand{\EngineeringSkills}{
-\section*{SKILLS \& COURSEWORK}
-\begin{itemize}
-    \item \textbf{Programming Languages:} Python, C++, Node.js, HTML, CSS, JavaScript, Bash
-    \item \textbf{Math Coursework:} Real analysis, abstract algebra, differential geometry, complex analysis, partial differential equations, linear algebra I \& II, numerical methods, discrete mathematics, probability
-    \item \textbf{Engineering Coursework:} Spacecraft attitude dynamics and control (graduate level), vehicle stability and control, active controls, numerical methods, astrodynamics, computational aerospace structural design (graduate level)
-\end{itemize}
-}
-
-\newcommand{\FFCertifications}{
-\section*{Certifications}
-\begin{itemize}
-    \item EMT-Basic — California EMT and NREMT
-    \item NFPA 1001: Structural Firefighter 1 and 2 — IFSAC Certified
-    \item NFPA 1072: HAZMAT Awareness and Operations — IFSAC Certified
-    \item NFPA 1051: L-180, S-110, S-130, S-190, S-212 — NWCG Certified
-\end{itemize}
-}
-
-%-------------------------------------------------------------------------------
 % Resume
 %-------------------------------------------------------------------------------
+
+% Retreive the macros from their respective files
+\input{summaries}
+\input{education}
+\input{jobs}
+\input{projects}
+\input{skills}
 
 % Header
 \begin{center}
@@ -316,10 +75,12 @@ Associate of Science in Science \hfill GPA: 3.67/4.0
 hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \end{center}
 
+% Summary
 \begin{center}
 \ServingSummary
 \end{center}
 
+% Experience
 \section*{RELEVANT EXPERIENCE}
 \MilkAndHoney
 \Eureka
@@ -327,6 +88,7 @@ hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \Marvinos
 \LakeridgeTownhomesMaintenance
 
+% Education
 \section*{EDUCATION}
 \Lonestar
 
