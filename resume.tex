@@ -8,7 +8,8 @@
 \usepackage{geometry} % For page margins
 \usepackage{titlesec} % For section title formatting
 \usepackage{enumitem} % For itemized list formatting
-\usepackage{hyperref} % For hyperlinks
+\usepackage[hidelinks]{hyperref} % For hyperlinks
+\usepackage{url} % for styling hyperlinks
 \usepackage{fontspec} % For custom fonts with xelatex and lualatex
 \usepackage{titlesec} % Use titlesec to apply the new font to section headers
 
@@ -29,10 +30,13 @@
 %     BoldItalicFeatures = {FontIndex=3} ,
 % ]
 
+\newfontfamily{\TimesNewRoman}{Times New Roman}
+
 % How to define a font using a .ttf file:
 % Define a new font to be used for headers
 \newfontfamily{\Garamond}{CormorantGaramond}[
     Ligatures = TeX ,
+    Scale = 1.2 ,
     Path = /Library/Fonts/ ,
     Extension = .ttf ,
     UprightFont = *-regular ,
@@ -45,7 +49,7 @@
 % % Define a new font to be used for headers
 % \newfontfamily{\GaramondLight}{CormorantGaramond}[
 %     Ligatures = TeX ,
-%     Path = /Library/Fonts/ ,
+%     Path = /Library/Fontsbtop/ ,
 %     Extension = .ttf ,
 %     UprightFont = *-Light ,
 %     ItalicFont = *-LightItalic ,
@@ -72,7 +76,7 @@
 
 % Section header format
 \titleformat{\section}
-    {\Large\Garamond} % formatting and font
+    {\Large\TimesNewRoman} % formatting and font
     {\thesection}{0em} % spacing between the section number and the title
     {} % the title
     [\titlerule] % additional code
@@ -94,7 +98,8 @@ itemsep=1sp}
 % Disable page numbers
 \pagestyle{empty}
 
-\newcommand\tab[1][1cm]{\hspace*{#1}}
+% Format urls to use a certain font
+\urlstyle{rm} % Use the default font for URLs
 
 %-------------------------------------------------------------------------------
 % Resume
