@@ -20,3 +20,5 @@ $GIT push
 $GIT checkout oddjobs
 $GIT merge main --no-edit
 $GIT push
+
+$GIT checkout main
