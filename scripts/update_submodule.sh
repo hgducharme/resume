@@ -17,7 +17,7 @@ for branch in $(git branch -r | grep -v '\->' | sed 's/origin\///'); do
     git checkout $branch
 
     # Update the submodule reference
-    git submodule update
+    git submodule update --remote
 
     # Stage the updated submodule reference
     git add components
