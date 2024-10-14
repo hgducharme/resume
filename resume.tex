@@ -30,9 +30,30 @@
 %     BoldItalicFeatures = {FontIndex=3} ,
 % ]
 
+% How to define a font using a .ttf file:
+% \newfontfamily{\Garamond}{CormorantGaramond}[
+%     Ligatures = TeX ,
+%     Scale = 1.0,
+%     Path = /Library/Fonts/ ,
+%     Extension = .ttf ,
+%     UprightFont = *-regular ,
+%     BoldFont = *-bold ,
+%     ItalicFont = *-italic ,
+%     BoldItalicFont = *-bolditalic
+% ]
+
+% How to define the light version of a font in a .ttf file:
+% % Define a new font to be used for headers
+% \newfontfamily{\GaramondLight}{CormorantGaramond}[
+%     Ligatures = TeX ,
+%     Path = /Library/Fontsbtop/ ,
+%     Extension = .ttf ,
+%     UprightFont = *-Light ,
+%     ItalicFont = *-LightItalic ,
+% ]
+
 \newfontfamily{\TimesNewRoman}{Times New Roman}
 
-% How to define a font using a .ttf file:
 % Define a new font to be used for headers
 \newfontfamily{\Garamond}{CormorantGaramond}[
     Ligatures = TeX ,
@@ -44,16 +65,6 @@
     ItalicFont = *-italic ,
     BoldItalicFont = *-bolditalic
 ]
-
-% How to define the light version of a font in a .ttf file:
-% % Define a new font to be used for headers
-% \newfontfamily{\GaramondLight}{CormorantGaramond}[
-%     Ligatures = TeX ,
-%     Path = /Library/Fontsbtop/ ,
-%     Extension = .ttf ,
-%     UprightFont = *-Light ,
-%     ItalicFont = *-LightItalic ,
-% ]
 
 % Define the light version of the helvetica font in the .ttc file
 \newfontfamily\HelveticaLight{Helvetica.ttc}[
