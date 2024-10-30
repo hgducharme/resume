@@ -7,7 +7,8 @@ This repository allows me to manage ridiculous amounts of variations to my resum
 My resume uses LaTeX and more specifically requires compiling with LuaLatex.
 
 Branches:
+
 - Engineering
 - Fire/EMS
-   - USAJobs
+  - USAJobs
 - Oddjobs
