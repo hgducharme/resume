@@ -13,7 +13,9 @@
 \usepackage{fontspec} % For custom fonts with xelatex and lualatex
 \usepackage{titlesec} % Use titlesec to apply the new font to section headers
 \usepackage{tabularray} % For tables
-\usepackage{graphicx} % To use \resizebox to resize table
+\usepackage{graphicx} % To use \resizebox to resize table, and also scaling text
+\usepackage{fancyhdr} % For editing headers and footers
+\usepackage{xcolor} % For changing text color
 
 % Set the document margins
 \geometry{a4paper, margin=0.75in} % Set paper size and margins
@@ -98,10 +100,18 @@ itemindent=-7pt,
 itemsep=1sp}
 
 % Disable page numbers
-\pagestyle{empty}
+% \pagestyle{empty}
+
+\pagestyle{fancy} % To use fancyhdr, set the page style to fancy
+\fancyhf{} % clear existing header/footer entries
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+\definecolor{footergray}{gray}{0.50} % 0.5 is 50% black
+ % Edit the footer text
+\fancyfoot[C]{
+    \textcolor{footergray}{\textit{Hunter Ducharme $\cdot$ hgducharme@gmail.com $\cdot$ (281) 450-7154}}}
 
 % Format urls to use a certain font
-\urlstyle{rm} % Use the default font for URLs
+\urlstyle{rm}
 
 %-------------------------------------------------------------------------------
 % Resume
@@ -173,7 +183,7 @@ hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \section*{REFERENCES}
 
 \begin{center}
-\SetTblrInner{rowsep=10pt,colsep=16pt}
+\SetTblrInner{rowsep=10pt,colsep=35pt}
 \begin{tblr}{
     colspec = {Q[l,m] Q[l,m]},
 }
@@ -181,28 +191,28 @@ hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 {\textbf{Paul Hiott} \\
 Los Padres National Forest \\
 Ojai Ranger District \\
-SFEO Casitas Engine 351/Crew 8 Manager \\
+SFEO, Casitas Engine 351/Crew 8 Manager \\
 paul.hiott@usda.gov \\
 (805) 451-8628}
 &
 {\textbf{Anthony Diaz} \\
 Los Padres National Forest \\
 Santa Lucia Ranger District \\
-Arroyo Grande Flight Crew Senior Lead Firefighter \\
+Senior Lead, AG Flight Crew (H-527) \\
 (209) 259-7086 \\
 anthony.diaz@usda.gov} \\
 
 {\textbf{Johnny McGraw} \\
 Los Padres National Forest \\
 Ojai Ranger District \\
-FEO Wheeler Gorge Engine 355 \\
+FEO, Wheeler Gorge Engine 355 \\
 jonathan.mcgraw-kilburn@usda.gov \\
 (805) 218-3203}
 &
 {\textbf{Miguel Carbajal} \\
 Los Padres National Forest \\
 Ojai Ranger District \\
-FF1 Casitas Engine 351 \\
+FF1, Casitas Engine 351 \\
 miguel.carbajal@usda.gov \\
 (805) 640-5434}
 
