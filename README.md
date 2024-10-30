@@ -10,3 +10,9 @@ Branches:
 - Fire/EMS
   - USAJobs
 - Oddjobs
+
+To build the resume:
+
+```sh
+make resume
+```
