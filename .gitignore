@@ -8,3 +8,4 @@
 *.out
 *.xdv
 *.synctex.gz
+build/
