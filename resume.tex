@@ -12,6 +12,8 @@
 \usepackage{url} % for styling hyperlinks
 \usepackage{fontspec} % For custom fonts with xelatex and lualatex
 \usepackage{titlesec} % Use titlesec to apply the new font to section headers
+\usepackage{tabularray} % For tables
+\usepackage{graphicx} % To use \resizebox to resize table
 
 % Set the document margins
 \geometry{a4paper, margin=0.75in} % Set paper size and margins
@@ -113,7 +115,7 @@ itemsep=1sp}
 
 % Header
 \begin{center}
-{\Huge \Garamond \bfseries Hunter Ducharme}\\[5pt] % add vertical spacing
+{\TimesNewRoman \scalebox{2.6}{Hunter Ducharme}}\\[5pt] % add vertical spacing
 hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \end{center}
 
@@ -141,34 +143,70 @@ hgducharme@gmail.com $\cdot$ (281) 450-7154 $\cdot$ Santa Barbara, CA
 \section*{RELATED TRAININGS}
 
 \begin{center}
-\begin{tabular}{|l|l|}
-    \hline
+\resizebox{\textwidth}{!}{%
+\SetTblrInner{rowsep=1pt, colsep=4pt}
+\begin{tblr}{
+    colspec={ll},
+    row{2} = {abovesep=3pt}
+}
+    \textbf{Course Title} & \textbf{Course Title} \\
     S-130 Firefighter Training & IS-100c Introduction to Incident Command System \\
-    \hline
     S-212 Wildland Fire Chainsaw & IS-200c Basic Incident Command System for Initial Response \\
-    \hline
     S-190 Introduction to Wildland Fire Behavior & IS-700b An Introduction to the National Incident Management System \\
-    \hline
     S-110 Basic Wildland Fire Orientation & IS-800d National Response Framework, An Introduction \\
-    \hline
     L-180 Human Factors in The Wildland Fire Service & \\
-    \hline
-\end{tabular}
+\end{tblr}
+}
 \end{center}
 
 \FFCertifications
 
 \section*{ACTIVITIES \& HOBBIES}
-software, running, reading, jiu jitsu, muay thai
+\begin{itemize}
+    \item Running
+    \item Traveling, camping, and seeing new places
+    \item Building software
+    \item Training jiu jitsu and muay thai
+    \item Cooking
+\end{itemize}
 
 \section*{REFERENCES}
-Paul Hiott - SFEO Casitas Engine 51/Crew 8 Manager\\
-paul.hiott@usda.gov\\\\
 
-\noindent Johnny McGraw - FEO Wheeler Gorge Engine 355\\
-jonathan.mcgraw-kilburn@usda.gov\\\\
+\begin{center}
+\SetTblrInner{rowsep=10pt,colsep=16pt}
+\begin{tblr}{
+    colspec = {Q[l,m] Q[l,m]},
+}
 
-\noindent Miguel Carbajal - FFT1 Casitas Engine 351\\
-miguel.carbajal@usda.gov
+{\textbf{Paul Hiott} \\
+Los Padres National Forest \\
+Ojai Ranger District \\
+SFEO Casitas Engine 351/Crew 8 Manager \\
+paul.hiott@usda.gov \\
+(805) 451-8628}
+&
+{\textbf{Anthony Diaz} \\
+Los Padres National Forest \\
+Santa Lucia Ranger District \\
+Arroyo Grande Flight Crew Senior Lead Firefighter \\
+(209) 259-7086 \\
+anthony.diaz@usda.gov} \\
+
+{\textbf{Johnny McGraw} \\
+Los Padres National Forest \\
+Ojai Ranger District \\
+FEO Wheeler Gorge Engine 355 \\
+jonathan.mcgraw-kilburn@usda.gov \\
+(805) 218-3203}
+&
+{\textbf{Miguel Carbajal} \\
+Los Padres National Forest \\
+Ojai Ranger District \\
+FF1 Casitas Engine 351 \\
+miguel.carbajal@usda.gov \\
+(805) 640-5434}
+
+\end{tblr}
+\end{center}
 
 \end{document}
